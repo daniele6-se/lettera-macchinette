@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lettera per l'introduzione delle macchinette</title>
+    <title>Lettera di Richiesta</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #FF2D00; /* Rosso aggressivo */
+            color: white;
         }
         .lettera {
-            background-color: white;
+            background-color: #000000; /* Sfondo nero per la lettera */
             padding: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #FF2D00; /* Bordo rosso */
             border-radius: 5px;
             max-width: 800px;
             margin: 0 auto;
         }
         h1 {
             text-align: center;
-            color: #0066cc;
+            color: #FFFB00; /* Giallo brillante */
         }
         p {
             line-height: 1.6;
@@ -30,6 +30,13 @@
             margin-top: 30px;
             text-align: right;
             font-style: italic;
+        }
+        /* Stile per la frase che verrà evidenziata */
+        .evidenziata {
+            background-color: #FFFF00; /* Giallo per evidenziare */
+            font-size: 1.5em; /* Aumento della dimensione del testo */
+            font-weight: bold;
+            color: #FF2D00; /* Colore rosso per un contrasto forte */
         }
     </style>
 </head>
@@ -46,9 +53,20 @@
 
         <p>Quindi, concludo questa mia lamentela chiedendo cortesemente l'introduzione di macchinette distributrici all'interno della scuola. Sarebbe un gesto che, ne sono certo, sarebbe molto apprezzato da tutti gli studenti e contribuirebbe a migliorare il nostro benessere durante le ore di lezione.</p>
 
-        <p>Mi auguro che questa richiesta non venga ignorata come altre in passato e che finalmente venga fatta giustizia per il benessere di noi studenti.</p>
+        <!-- La frase che sarà evidenziata -->
+        <p id="fraseIncisiva">Mi auguro che questa richiesta non venga ignorata come altre in passato e che finalmente venga fatta giustizia per il benessere di noi studenti.</p>
+
+        <button onclick="evidenziaFrase()">Evidenzia la frase importante</button>
 
         <p class="firma">Un saluto, <br> [Tuo Nome]</p>
     </div>
+
+    <script>
+        function evidenziaFrase() {
+            // Seleziona l'elemento con l'ID 'fraseIncisiva' e aggiunge la classe 'evidenziata'
+            var frase = document.getElementById('fraseIncisiva');
+            frase.classList.toggle('evidenziata'); // Aggiunge o rimuove la classe
+        }
+    </script>
 </body>
 </html>
